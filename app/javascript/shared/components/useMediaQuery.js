@@ -3,7 +3,7 @@ import { useState, useEffect } from 'preact/hooks';
 /**
  * Pre-defined breakpoints for width.
  *
- * Note: These were copied from _generator.scss.
+ * Note: These were copied from _import.scss.
  */
 export const BREAKPOINTS = Object.freeze({
   Small: '640',
@@ -15,14 +15,13 @@ export const BREAKPOINTS = Object.freeze({
  * A custom Preact hook for evaluating whether or not a CSS media query is matched or not.
  *
  * @param {string} query The media query to evaluate.
- * @param {function} render A render prop for using   the media query.
  *
  * @returns {boolean} True if the media query is matched, false otherwise.
  *
  * @example
  * import { useMediaQuery } from '@components/useMediaQuery';
  *
- * function SomeComponent({ query, render }) {
+ * function SomeComponent({ query }) {
  *    const matchesBreakpoint = useMediaQuery(query);
  *
  *    if (!matchesBreakpoint) {
